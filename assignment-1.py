@@ -259,7 +259,6 @@ print(s1)
 
 # In[57]:
 
-
 s=input("Enter the string :")
 
 #using built-in function
@@ -273,6 +272,37 @@ print("Length of string: ",c)
 
 
 # In[ ]:
+
+n=input("Enter the string :")
+s=n.split(" ")
+for i in s:
+    if len(i)%2==0:
+        print(i)
+
+# In[ ]:
+
+t=(1,2,3,4,5)
+print(len(t))
+
+# In[ ]:
+
+t=(1,2,3,4,5)
+print("Maximum value= ",max(t))
+print("Minimum value= ",min(t))
+
+
+# In[ ]:
+
+t=(1,2,3,4,5)
+print("Sum of elements in the tuple:",sum(t))
+
+# In[ ]:
+
+tmat = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+for row in tmat:
+    s=sum(row)
+    print("Row sum:",s)
+
 
 
 
