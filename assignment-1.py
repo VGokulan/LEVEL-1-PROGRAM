@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# 1)Display “Hello World” in your output screen.
 
 
 print("Hello World")
 
 
-# In[2]:
+# 2)Get the input from the user and perform addition of two numbers
 
 
 a=int(input("Enter value1:"))
@@ -16,7 +16,7 @@ c=a+b
 print("Sum=",c)
 
 
-# In[4]:
+# 3)swap two variables without temp variable
 
 
 a=int(input("Enter value of a:"))
@@ -28,7 +28,7 @@ print("value of a=",a)
 print("value of b=",b)
 
 
-# In[5]:
+# 4)convert the entered kilometres ( Convertion  Factor= 0.621371)
 
 
 km=int(input("Enter km value"))
@@ -36,7 +36,7 @@ m=km*0.621371
 print("miles=",m)
 
 
-# In[6]:
+# 5)check whether the given number is positive, negative or 0
 
 
 a=int(input("Enter value:"))
@@ -48,7 +48,7 @@ else:
     print("It is zero")
 
 
-# In[7]:
+# 6)verify that the given year is a leap year
 
 
 year=int(input("Enter year value:"))
@@ -60,7 +60,7 @@ else:
     print("It is not a leap year")
 
 
-# In[33]:
+# 7)display the prime numbers within the given interval
 
 
 lower=int(input("Enter lower limit value: "))
@@ -74,7 +74,7 @@ for num in range(lower, upper + 1):
             print(num)
 
 
-# In[4]:
+# 8) display the Fibonacci sequence up to n-th term
 
 
 num=int(input("Enter value:"))
@@ -88,7 +88,7 @@ for i in range(2, num):
     print(n3, end=" ")
 
 
-# In[6]:
+# 9) check if the number is an Armstrong number or not
 
 
 a=int(input("Enter a number: "))
@@ -103,7 +103,7 @@ else:
     print(num,"is not an Armstrong number")
 
 
-# In[11]:
+# 10) Find the Sum of natural numbers up to n-th term
 
 
 a=int(input("Enter value: "))
@@ -116,7 +116,13 @@ else:
 print(s)
 
 
-# In[14]:
+# 11) Write a function called show_stars(rows). If rows are 5, it should print the following:
+#  *
+#  **
+#  ***
+#  ****
+#  *****
+
 
 
 row=int(input("Enter number of lines: "))
@@ -124,7 +130,7 @@ for i in range(1,row+1):
     print("*"*i)
 
 
-# In[4]:
+# 12) Write a program to remove characters from a string starting from zero up to n and return a new string.
 
 
 s=input("Enter any string: ")
@@ -133,7 +139,7 @@ b=len(s)
 print(s[n:])
 
 
-# In[5]:
+# 13) Iterate the given list of numbers and print only those numbers which are divisible by 5
 
 
 l=[1,5,8,10,31,62,85,30,40]
@@ -142,7 +148,7 @@ for i in l:
         print(i)
 
 
-# In[6]:
+# 14) Write a program to find how many times substring “Hi” appears in the given string.
 
 
 str=input("Enter the string :")
@@ -152,7 +158,13 @@ count=str.count(str2)
 print("Number of substring occurrences:",count)
 
 
-# In[22]:
+# 15) Print the following pattern
+#  1 
+#  2 2 
+#  3 3 3 
+#  4 4 4 4 
+#  5 5 5 5 5
+
 
 
 row=int(input("Enter number of lines: "))
@@ -160,7 +172,7 @@ for i in range(1,row+1):
     print("% s" % i*i)
 
 
-# In[25]:
+# 16) Write a program to check if the given number is a palindrome number.(A palindrome number is a number that is same after reverse. For example, 545, is the palindrome numbers)
 
 
 pal=input("Enter a number")
@@ -170,7 +182,7 @@ else:
     print("It is not a pallindrome")
 
 
-# In[30]:
+# 17) Python program to interchange first and last elements in a list
 
 
 l=[1,2,3,4,5]
@@ -179,7 +191,7 @@ l[0],l[len(l)-1]=l[len(l)-1],l[0]
 print("After interchanging:  ",l)
 
 
-# In[38]:
+# 18)Python program to swap two elements in a list
 
 
 l=[1,2,3,4,5]
@@ -189,7 +201,7 @@ l[x],l[y]=l[y],l[x]
 print("After swapping: ",l)
 
 
-# In[41]:
+# 19)Python | Ways to find length of list
 
 
 l=[1,2,3,4,5]
@@ -204,7 +216,7 @@ for i in l:
 print("Length of list: ",c)
 
 
-# In[42]:
+# 20)Maximum of two numbers in Python
 
 
 a,b=int(input("enter value 1: ")), int(input("enter value 2: "))
@@ -214,7 +226,7 @@ else:
     print("Maximum value is= ",b)
 
 
-# In[43]:
+# 21)Minimum of two numbers in Python
 
 
 a,b=int(input("enter value 1: ")), int(input("enter value 2: "))
@@ -224,7 +236,7 @@ else:
     print("Minimum value is= ",a)
 
 
-# In[47]:
+# 22)Python program to check whether the string is Symmetrical or Palindrome
 
 
 val=input("Enter sting value: ")
@@ -241,14 +253,14 @@ else:
     print("It is not symmentrical")
 
 
-# In[48]:
+# 23)Reverse words in a given String in Python
 
 
 val=input("Enter sting value: ")
 print(val[::-1])
 
 
-# In[56]:
+# 24)Ways to remove i’th character from string in Python
 
 
 s=input("Enter the string :")
@@ -257,7 +269,7 @@ s1=s[:i]+s[i+1:]
 print(s1)
 
 
-# In[57]:
+# 25)Find length of a string in python 
 
 s=input("Enter the string :")
 
@@ -271,7 +283,7 @@ for i in s:
 print("Length of string: ",c)
 
 
-# In[ ]:
+# 26)Python program to print even length words in a string
 
 n=input("Enter the string :")
 s=n.split(" ")
@@ -279,24 +291,24 @@ for i in s:
     if len(i)%2==0:
         print(i)
 
-# In[ ]:
+# 27)Python program to Find the size of a Tuple
 
 t=(1,2,3,4,5)
 print(len(t))
 
-# In[ ]:
+# 28)Python – Maximum and Minimum K elements in Tuple
 
 t=(1,2,3,4,5)
 print("Maximum value= ",max(t))
 print("Minimum value= ",min(t))
 
 
-# In[ ]:
+# 29)Python – Sum of tuple elements
 
 t=(1,2,3,4,5)
 print("Sum of elements in the tuple:",sum(t))
 
-# In[ ]:
+# 30)Python – Row-wise element Addition in Tuple Matrix
 
 tmat = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
 for row in tmat:
