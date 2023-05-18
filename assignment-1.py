@@ -314,8 +314,238 @@ tmat = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
 for row in tmat:
     s=sum(row)
     print("Row sum:",s)
+    
+ # 31)Create a list of tuples from given list having number and its cube in each tuple
+
+l = [1,2,3,4,5]
+p = [(i, pow(i, 3)) for i in l]
+print(p)
+
+# 32)Python | Sort Python Dictionaries by Key or Value
+
+Dict = {'ram': 24, 'raj': 46,'ravi': 36, 'raja': 27, 'raju': 45}
+K= list(Dict.keys())
+K.sort()
+sdict={i: Dict[i] for i in K}
+print(sdict)
+
+# 33)Python dictionary with keys having multiple inputs
+
+d= {}
+a,b,c= 5, 3, 10
+p,q,r= 12, 6, 9
+d["x-y+z"] = [a-b+c,p-q+r]
+print(d)
+
+# 34)Python program to find the sum of all items in a dictionary
+
+d={'x':455,'y':223,'z':300,'p':908 }
+print("Dictionary: ", d)
+print("sum: ",sum(d.values()))
+
+# 35)Python program to find the size of a Dictionary
+
+dic1 = {"A": 1,"B": 2,"C": 3}
+print("Size of dic1: ",len(dic1))
+
+# 36)Find the size of a Set in Python
+
+s={1,2,3,4,5}
+print("Size of set: ",len(s))
+
+# 37)Iterate over a set in Python
+
+s=set("Hello_World")
+for i in s:
+    print(i)
+
+# 38)Python – Maximum and Minimum in a Set
+
+s={1,2,3,4,5}
+print("Maximum of the set: ",max(s))
+print("Minimum of the set: ",min(s))
+
+# 39)Python – Remove items from Set
+
+s={1,2,3,4,5}
+print("Initial list: ",s)
+s.remove(5)
+print("Final list: ",s)
+
+# 40)Python – Check if two lists have atleast one element common
+
+s={1,2,3,4,5}
+p={5,6,7,8,9}
+for i in s:
+    for j in p:
+        if i==j:
+            print("Element common is:", i)
+# 41)Python – Assigning Subsequent Rows to Matrix first row elements
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+print("My matrix is:")
+
+for i in range(1, len(matrix)):
+    matrix[i] = matrix[0]
+
+print(matrix)
+
+# 42)Adding and Subtracting Matrices in Python
+
+# Input matrices
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = [[4, 5], [6, 7]]
+ 
+
+print("Printing elements of first matrix")
+for row in matrix1:
+    for element in row:
+        print(element, end=" ")
+    print()
+ 
+
+print("Printing elements of second matrix")
+for row in matrix2:
+    for element in row:
+        print(element, end=" ")
+    print()
+ 
+
+result = [[0, 0], [0, 0]]
+for i in range(len(matrix1)):
+    for j in range(len(matrix1[0])):
+        result[i][j] = matrix1[i][j] - matrix2[i][j]
+ 
+
+print("Subtraction of two matrix")
+for row in result:
+    for element in row:
+        print(element, end=" ")
+    print()
+ 
+# 43)Python – Group similar elements into Matrix
+
+elements = [1, 2, 3, 2, 1, 3, 4, 5, 4, 5, 5]
 
 
+element_counts = {}
+for element in elements:
+    if element in element_counts:
+        element_counts[element] += 1
+    else:
+        element_counts[element] = 1
 
 
+num_rows = max(element_counts.values())
+num_cols = len(element_counts)
 
+
+matrix = [[None] * num_cols for _ in range(num_rows)]
+for col, element in enumerate(element_counts):
+    count = element_counts[element]
+    for row in range(count):
+        matrix[row][col] = element
+
+
+for row in matrix:
+    print(row)
+    
+# 44)Python – Row-wise element Addition in Tuple Matrix
+
+matrix = ((1, 2, 3),
+          (4, 5, 6),
+          (7, 8, 9))
+
+
+row_sums = [sum(row) for row in zip(*matrix)]
+
+
+print("Row-wise sums:")
+for sum_value in row_sums:
+    print(sum_value)
+    
+# 45)Create an n x n square matrix, where all the sub-matrix has the sum of opposite corner elements as even
+
+def create_even_submatrix(n):
+    matrix = [[0] * n for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            if (i + j) % 2 == 0:
+                matrix[i][j] = 1
+
+    return matrix
+
+
+n = 4
+result = create_even_submatrix(n)
+
+for row in result:
+    print(row)
+    
+ # 46)How to get list of parameters name from a function in Python?
+
+import inspect
+
+def my_function(guna,dinesh, kannan):
+    pass
+
+parameters = inspect.signature(my_function).parameters
+parameter_names = list(parameters.keys())
+
+
+print(parameter_names)
+
+# 47)How to Print Multiple Arguments in Python?
+
+def p(name, num):
+    print("Hello from ", name + ', ' + num)
+  
+  
+p("", "25")
+
+# 48)Python program to find the power of a number using recursion
+
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    elif exponent < 0:
+        return 1 / power(base, -exponent)
+    else:
+        return base * power(base, exponent - 1)
+
+
+base =int(input("Enter the base: "))
+exponent =int(input("Enter the power: "))
+result = power(base, exponent)
+print(f"{base} raised to the power of {exponent} is: {result}")
+
+# 49)Sorting objects of user defined class in Python
+
+class grade:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+  
+    def __repr__(self):
+        return str((self.a, self.b))
+  
+
+g= [grade("ram", 'a'),
+       grade("ravi", 'b'),
+       grade("raj", 'c'),
+       grade("mani", 'd'),
+       grade("goku", 's')]
+  
+
+print(sorted(g, key=lambda x: x.b))
+
+# 50)Functions that accept variable length key value pair as arguments
+
+def pk(**k):
+    print(k)
+ 
+if __name__ == "__main__":
+    pk(w1='hello', w2='world')
