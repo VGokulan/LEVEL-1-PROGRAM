@@ -544,8 +544,9 @@ print(sorted(g, key=lambda x: x.b))
 
 # 50)Functions that accept variable length key value pair as arguments
 
-def pk(**k):
-    print(k)
- 
-if __name__ == "__main__":
-    pk(w1='hello', w2='world')
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Example usage
+print_kwargs(name="Guna", age=18, city="Keezhpaakam")
